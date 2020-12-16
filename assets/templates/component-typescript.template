@@ -1,7 +1,5 @@
 interface {componentName}Props {}
 
-export default function {componentName}(props:{componentName}Props)(
-  <div>
- 
-  </div>
-);
+export default function {componentName}(props:{componentName}Props) {
+  return <div></div>;
+}
