@@ -40,10 +40,7 @@
     "typescript"
   ],
   "activationEvents": [
-    "onCommand:extension.genReactContainerComponentFiles",
-    "onCommand:extension.genReactStatelessComponentFiles",
-    "onCommand:extension.genReactReduxContainerComponentFiles",
-    "onCommand:extension.genReactReduxStatelessComponentFiles"
+    "onCommand:extension.genReactTypescriptComponentFiles"
   ],
   "main": "./out/src/extension",
   "icon": "assets/images/icon.png",
@@ -68,7 +65,7 @@
         },
         "ACReactComponentGenerator.global.lifecycleType": {
           "type": "string",
-          "default": "legacy",
+          "default": "reactv16",
           "enum": [
             "legacy",
             "reactv16"
@@ -82,7 +79,7 @@
         },
         "ACReactComponentGenerator.mainFile.extension": {
           "type": "string",
-          "default": "jsx",
+          "default": "tsx",
           "description": "The extension of generated component file"
         },
         "ACReactComponentGenerator.styleFile.create": {
@@ -100,7 +97,7 @@
             "sass (.scss)",
             "less (.less)"
           ],
-          "default": "styled-components (.js)",
+          "default": "standard (.css)",
           "description": "The type of stylesheet file to create"
         },
 
@@ -116,45 +113,21 @@
         },
         "ACReactComponentGenerator.indexFile.extension": {
           "type": "string",
-          "default": "js",
+          "default": "ts",
           "description": "The extension of generated component index file"
         }
       }
     },
     "commands": [
       {
-        "command": "extension.genReactContainerComponentFiles",
-        "title": "New React Container Component"
-      },
-      {
-        "command": "extension.genReactStatelessComponentFiles",
-        "title": "New React Stateless Component"
-      },
-      {
-        "command": "extension.genReactReduxContainerComponentFiles",
-        "title": "New React Container Component with Redux"
-      },
-      {
-        "command": "extension.genReactReduxStatelessComponentFiles",
-        "title": "New React Stateless Component with Redux"
+        "command": "extension.genReactTypescriptComponentFiles",
+        "title": "New React Typescript Component"
       }
     ],
     "menus": {
       "explorer/context": [
         {
-          "command": "extension.genReactContainerComponentFiles",
-          "group": "navigation"
-        },
-        {
-          "command": "extension.genReactStatelessComponentFiles",
-          "group": "navigation"
-        },
-        {
-          "command": "extension.genReactReduxContainerComponentFiles",
-          "group": "navigation"
-        },
-        {
-          "command": "extension.genReactReduxStatelessComponentFiles",
+          "command": "extension.genReactTypescriptComponentFiles",
           "group": "navigation"
         }
       ]
