@@ -144,16 +144,16 @@ export default function getConfig(uri?: Uri) {
 export function getStyleSheetExtTemplate() {
   const configuredView = getConfig().get('styleFile.type');
   let styleTemplate = {
-    ext: 'css',
+    ext: 'module.css',
     template: 'css.template',
   };
 
   switch (configuredView) {
-    case 'styled-components (.js)':
-      styleTemplate = { ext: 'js', template: 'css-styled.template' };
+    case 'styled-components (.ts)':
+      styleTemplate = { ext: 'ts', template: 'css-styled.template' };
       break;
-    case 'emotion (.js)':
-      styleTemplate = { ext: 'js', template: 'css-emotion.template' };
+    case 'emotion (.ts)':
+      styleTemplate = { ext: 'ts', template: 'css-emotion.template' };
       break;
     case 'sass (.sass)':
       styleTemplate.ext = 'sass';
