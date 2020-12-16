@@ -60,10 +60,10 @@ export function activate(context: ExtensionContext) {
     };
 
     const componentArray = [
-        { type: "container", commandId: 'extension.genReactContainerComponentFiles' },
-        { type: "stateless", commandId: 'extension.genReactStatelessComponentFiles' },
-        { type: "reduxContainer", commandId: 'extension.genReactReduxContainerComponentFiles' },
-        { type: "reduxStateless", commandId: 'extension.genReactReduxStatelessComponentFiles' },
+//         { type: "container", commandId: 'extension.genReactContainerComponentFiles' },
+           { type: "typescript", commandId: 'extension.genReactTypescriptComponentFiles' },
+//         { type: "reduxContainer", commandId: 'extension.genReactReduxContainerComponentFiles' },
+//         { type: "reduxStateless", commandId: 'extension.genReactReduxStatelessComponentFiles' },
     ];
 
     // The command has been defined in the package.json file
